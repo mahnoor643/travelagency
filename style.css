@@ -543,6 +543,62 @@
   border: none;
   box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
 }
+/* .cardPackageStyle{
+  border: none;
+}
+.cardPackageStyle:hover{
+  background-color: #0B161E;
+  color:#fff;
+  cursor: pointer;
+} */
+
+.custom-card {
+  width: 340px; /* Set a fixed width for all cards */
+  height: 800px; /* Set a fixed height for uniformity */
+  border: 1px solid #ddd; /* Light border for separation */
+  border-radius: 3px; /* Rounded corners */
+  overflow: hidden; /* Prevents content from overflowing */
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* Card background */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.custom-card:hover{
+  color:#fff;
+  background-color: #0B161E;
+}
+
+.custom-card-img {
+  width: 100%; /* Ensures image spans full width */
+  height: 356px; /* Fixed height for image */
+  object-fit: cover; /* Keeps image aspect ratio while covering space */
+}
+
+.custom-card-body {
+  flex-grow: 1; /* Fills remaining space */
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Keeps title and text spaced */
+}
+
+.custom-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.custom-card-text {
+  font-size: 14px;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 16; /* Limits text to 5 lines */
+  -webkit-box-orient: vertical;
+}
+
+
 
 .footer {
   background: url('imgs/footer.jpg') no-repeat center center;
@@ -642,4 +698,196 @@
     flex-direction: column;
     gap: 10px;
   }
+}
+
+/* package page */
+.custom-bg {
+  background-image: url('imgs/packageDetailCover.jpg'); /* Replace with your image path */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  padding: 200px 20px 40px 20px; /* Adjusted padding for small screens */
+  color: white; 
+  position: relative; /* Ensures child elements are positioned correctly */
+}
+
+/* Form Container */
+.custom-form-container {
+  background-color: #0B161E; 
+  height: fit-content;
+  border-radius: 10px;
+  padding: 50px;
+  position: absolute;
+  bottom: -200px;
+  right: 20px;
+  color: white;
+  width: 350px; /* Fixed width for desktop */
+}
+
+/* Adjust Form Position for Smaller Screens */
+@media (max-width: 992px) { 
+  .custom-form-container {
+    position: relative; /* Moves form below content on smaller screens */
+    bottom: 0;
+    width: 100%; /* Full width on smaller screens */
+    margin-top: 20px;
+  }
+}
+
+/* Input Fields */
+.custom-input {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #0B161E;
+  border: 0.5px solid grey;
+  padding: 10px;
+  color: white;
+}
+
+.custom-input::placeholder {
+  color: grey;
+}
+
+/* Submit Button */
+.custom-btn {
+  width: 100%;
+  background-color: grey; 
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Package Content */
+.package-container {
+  border-radius: 10px;
+  padding: 20px;
+  color: #333;
+  position: relative; /* Ensures content stacks correctly */
+}
+
+.package-title {
+  color: #0B161E;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.package-section {
+  margin-bottom: 20px;
+}
+
+
+/* about page */
+
+.section-title {
+  color: #0B161E;
+  border-bottom: 2px solid #0B161E;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.package-list {
+  list-style-type: none; /* Removes bullets */
+  padding-left: 0;
+  font-size: 16px;
+}
+
+.package-list li {
+  margin-bottom: 5px;
+}
+
+/* Map Styling */
+.map-container {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 20px;
+}
+
+/* about */
+.detailsSection {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  align-items: center;
+}
+
+.detailsSecHeading {
+  font-size: 54px;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.line {
+  width: 80px;
+  height: 3px;
+  background-color: #0B161E;
+}
+
+.bgWhite {
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 20px;
+  z-index: 1;
+  background-color: white;
+}
+
+.DetailsImg {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-40%, -50%); 
+  width: 80%; 
+  max-width: 600px; 
+  height: auto;
+  z-index: -1;
+}
+
+/* Responsive Fixes */
+@media (max-width: 992px) {
+  .detailsSection {
+    flex-direction: column;
+  }
+
+  .title-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .DetailsImg {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    z-index: -1;
+  }
+}
+
+.icon-style{
+  font-size: 55px;
+}
+.sec2-card{
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: #0B161E;
+  background-color: #fff;
+}
+.sec2-card:hover{
+  background-color: #0B161E;
+  color: #fff;
 }
