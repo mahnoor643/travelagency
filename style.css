@@ -891,3 +891,219 @@
   background-color: #0B161E;
   color: #fff;
 }
+.blog-cards{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: none;
+}
+
+
+
+.blue{
+  color:#002233;
+}
+
+#content{
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+}
+/* form background */
+
+.form{
+  background-color: transparent;
+  padding: 40px 20px;
+  width: 100%;
+  /* max-width: 300px; */
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px #666;
+}
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem; /* Add space between input groups */
+}
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid rgb(145, 141, 141);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: black;
+  font-size: 16px;
+}
+.placeholder {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 16px;
+  color: grey;
+  transition: 0.3s;
+  pointer-events: none;
+}
+.input-group input:focus + .placeholder,
+.input-group input:not(:placeholder-shown) + .placeholder {
+  top: -10px;
+  left: 0;
+  font-size: 12px;
+  color: grey;
+}
+
+.gradient-btn {
+  background: linear-gradient(to right, #0377B4, #002233, #100c14);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 30px;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.gradient-btn:hover {
+  background: linear-gradient(to right, #100c14, #002233, #0377B4);
+  transform: scale(1.05);
+}
+
+.gradient-btn:active {
+  transform: scale(1);
+}
+
+/* icon */
+.foricon a {
+  border: 13px solid transparent;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  line-height: 1; /* Ensure line-height is consistent */
+}
+
+.bi-facebook, .bi-twitter, .bi-instagram, .bi-youtube {
+  font-size: large;
+  transition: all 0.3s ease; /* Add transition for smooth effect */
+}
+
+.bi-facebook {
+  color: #3b5998;
+}
+
+.bi-facebook:hover {
+  color: #fff;
+  background-color: #3b5998;
+  box-shadow: 0 0 10px #3b5998; /* Add shadow for hover effect */
+  border-radius: 30%;
+}
+
+.bi-twitter {
+  color: #00acee;
+}
+
+.bi-twitter:hover {
+  background-color: #00acee;
+  color: #FFF;
+  box-shadow: 0 0 10px #00acee; /* Add shadow for hover effect */
+  border-radius: 30%;
+}
+
+.bi-instagram {
+  background: linear-gradient(to bottom, #E1306C 0%, #FD1D1D 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease; /* Add transition for smooth effect */
+}
+
+.bi-instagram:hover {
+  -webkit-text-fill-color: #fff; /* Change text color to white */
+  color: #fff; /* Fallback for other browsers */
+  background-color: #FD1D1D; /* Adjust the background color on hover */
+  box-shadow: 0 0 10px #FD1D1D; /* Add shadow for hover effect */
+  border-radius: 30%;
+  text-decoration: none; /* Remove underline if any */
+}
+
+.bi-youtube {
+  color: #FF0000;
+}
+
+.bi-youtube:hover {
+  color: #fff;
+  background-color: #FF0000;
+  box-shadow: 0 0 10px #FF0000; /* Add shadow for hover effect */
+  border-radius: 30%;
+}
+
+
+
+
+
+.bgTransparent {
+  background-color: #fff;
+  z-index: 2;
+  box-shadow: 0px 0px 10px 0px #fffefe;
+  border-radius: 15px;
+  backdrop-filter: blur(0.2px);
+  position: relative;
+  overflow: hidden;
+}
+
+
+.inner-content {
+  position: relative;
+  background: #fff; /* Inner background color */
+  border-radius: 10px;
+  padding: 20px;
+  color: #0377B4; /* Text color */
+  z-index: 2; /* Ensure content is above the gradient */
+  width: 99.4%;
+  margin-left: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(-360deg);
+  }
+}
+
+
+/* form validation */
+
+.error-msg {
+  color: red;
+  font-size: 12px;
+  margin-top: -1px;
+  margin-bottom: 10px;
+  display: none; /* Hide by default */
+}
+
+
+/* media query */
+
+/* Target phones (portrait and landscape) */
+@media only screen and (max-width: 767px) {
+  .inner-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .col-lg-4, .col-md-6, .col-md-12 {
+      max-width: 100%;
+      flex: 0 0 100%;
+      padding: 10px 0;
+  }
+  .text-center {
+      text-align: center;
+  }
+}
