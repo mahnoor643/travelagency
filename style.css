@@ -229,14 +229,17 @@
 @media (max-width: 1024px) {
   .discoverH {
     font-size: 50px;
+    padding-left:20px ;
   }
 
   .mainHead {
     font-size: 35px;
+    padding-left:20px ;
   }
 
   .mainHeadpara {
     font-size: 12px;
+    padding-left:20px ;
   }
 
   .eventsDiv {
@@ -416,6 +419,7 @@
   .left-fixed {
     width: 100%;
     margin-bottom: 20px;
+    box-shadow: none;
   }
 
   .carousel-wrapper {
@@ -425,11 +429,24 @@
   .carousel-item-custom {
     flex: 0 0 50%;
   }
+  .carousel-item-custom img{
+    height:300px;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
   .carousel-item-custom {
     flex: 0 0 100%;
+  }
+  .left-fixed {
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: none;
+  }
+  .carousel-item-custom img{
+    height:300px;
+    width: 100%;
   }
 }
 
